@@ -3,6 +3,7 @@ body {
     height: 100%;
     font-family: "Comic Neue", cursive !important;
     background-color: #ebebeb;
+    overflow-x: hidden;
 }
 
 h1,
@@ -244,35 +245,6 @@ ol {
     color: #fff;
     margin-left: 30px;
     font-size: 16px;
-}
-
-.main-menu {
-    list-style: none;
-}
-
-.main-menu li {
-    display: inline;
-}
-
-.main-menu li a {
-    display: inline-block;
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 25px 20px;
-    margin-right: -5px;
-    -webkit-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-}
-
-.main-menu li a:hover {
-    background: #f6d810;
-}
-
-.main-menu li.active a {
-    background: rgba(246, 216, 16, 0.77);
 }
 
 /*---------------------
