@@ -78,7 +78,7 @@
             <div class="row language-section">
               <div class="form-group col-md-6 single-language-selction-section">
                 {!! Form::select('language_id[]', $languages ?? ['1' => 'arabic', '2' => 'english', '3' => 'german'], null, ['class' => 'form-control', 'placeholder' =>
-                'Select one']) !!}
+                'Select one', 'required' => true]) !!}
               </div>
               <div class="form-group col-md-6" id="add-more-language-btn-section">
                 <button type="button" class="btn btn-primary form-control"><i
@@ -89,7 +89,7 @@
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            {!! Form::number('number_of_words', null, ['class' => 'form-control', 'placeholder' => 'Number of words']) !!}
+            {!! Form::number('number_of_words', null, ['class' => 'form-control', 'placeholder' => 'Number of words', 'required' => true]) !!}
             @if($errors->has('number_of_words'))
             <span class="text-danger">{{ $errors->first('number_of_words') }}</span>
             @endif
@@ -106,13 +106,13 @@
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            {!! Form::text('duration', null, ['class' => 'form-control', 'placeholder' => 'Type Duration']) !!}
+            {!! Form::text('duration', null, ['class' => 'form-control', 'placeholder' => 'Type Duration', 'required' => true]) !!}
             @if($errors->has('duration'))
             <span class="text-danger">{{ $errors->first('duration') }}</span>
             @endif
           </div>
           <div class="form-group col-md-6">
-            {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Type Name']) !!}
+            {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Type Name', 'required' => true]) !!}
             @if($errors->has('name'))
             <span class="text-danger">{{ $errors->first('name') }}</span>
             @endif
@@ -120,13 +120,13 @@
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            {!! Form::text('discount', null, ['class' => 'form-control', 'placeholder' => 'Discount']) !!}
+            {!! Form::text('discount', null, ['class' => 'form-control', 'placeholder' => 'Discount', 'required' => true]) !!}
             @if($errors->has('discount'))
             <span class="text-danger">{{ $errors->first('discount') }}</span>
             @endif
           </div>
           <div class="form-group col-md-6">
-            {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email']) !!}
+            {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email', 'required' => true]) !!}
             @if($errors->has('email'))
             <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
