@@ -1,17 +1,22 @@
 const add_more_button_html = '<div class="form-group col-md-6" id="add-more-language-btn-section">'
   + '<button type="button" class="btn btn-primary form-control"><i class="fa fa-plus"></i>&nbsp;Add More</button>'
   + '</div>';
+var add_more_click_counter = 0;
 
 $(document).on('click', '#add-more-language-btn-section button[type="button"]', function () {
+  ++add_more_click_counter;
   addMoreLanguageSelection();
+
 });
 
 function addMoreLanguageSelection() {
   let cloneLanguageSelection = $('.single-language-selction-section:first-child').clone();
   $('.language-section #add-more-language-btn-section').remove();
-  $('.language-section').append(cloneLanguageSelection);
-  $('.language-section').append(add_more_button_html);
-
+  if (add_more_click_counter % 2) {
+    $('.language-section').append(cloneLanguageSelection).append(add_more_button_html);
+  } else {
+    $('.language-section').append(add_more_button_html).append(cloneLanguageSelection);
+  }
 }
 
 $(document).on('click', '#reset-btn', function () {
