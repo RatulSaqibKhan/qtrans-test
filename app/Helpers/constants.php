@@ -14,4 +14,6 @@ CONST FIELD_OF_TEXTS = [
     '4' => 'Other',
 ];
 
+const SAVE_SUCCESS_MSG = 'Data stored successfully!';
+const SAVE_FAILED_MSG = 'Data stored failed!';
 ?>

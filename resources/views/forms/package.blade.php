@@ -47,10 +47,11 @@
       <h5><strong>Packages</strong> | Create Package</h5>
     </div>
   </div>
-  {!! Form::open(['url' => url('/package'), 'method' => 'POST', 'autocomplete' => 'off']) !!}
+  {!! Form::open(['url' => url('/packages'), 'method' => 'POST', 'autocomplete' => 'off']) !!}
   <div class="row mt-4">
     <div class="container">
       <div class="col-12 border-light border p-5">
+        @include('includes.flash_message')
         <div class="row">
           <div class="col-6">
             <div class="row">
